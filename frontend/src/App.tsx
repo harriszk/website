@@ -5,7 +5,10 @@ import Projects from "./pages/Projects";
 import Unknown from "./pages/Unknown";
 import Blog from "./projects/blog/Blog";
 import BlogEditor from "./projects/blog/BlogEditor";
+<<<<<<< HEAD
 import Viewer from "./projects/blog/Viewer";
+=======
+>>>>>>> 76e9ecd (feat: create post endpoint)
 
 const App = () => {
     return (
@@ -18,7 +21,10 @@ const App = () => {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/projects/blog/*" element={<Blog />} />
                     <Route path="/projects/blog/editor" element={<BlogEditor />} />
+<<<<<<< HEAD
                     <Route path="/projects/blog/post/:id" element={<Viewer />} />
+=======
+>>>>>>> 76e9ecd (feat: create post endpoint)
                     <Route
                         path="/projects/lung-talk/*"
                         element={<div>Lung Talk Project Placeholder</div>}
