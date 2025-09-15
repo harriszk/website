@@ -20,4 +20,14 @@ public class PostService {
     public List<Post> getAllPosts() {
         return postRepository.findAll();
     }
+
+    public Post createPost(Post post) {
+        Long id = post.getId();
+
+        if (id != null && postRepository.existsById(id)) {
+            return null;
+        }
+
+        return postRepository.save(post);
+    }
 }
