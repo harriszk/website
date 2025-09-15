@@ -1,0 +1,38 @@
+# Node / Frontend
+node_modules/
+dist/
+build/
+.env
+.vscode/
+
+# Maven / Java / Backend
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.classpath
+*.project
+*.settings/
+
+# Logs
+*.log
+
+# Temporary / OS files
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Yarn / pnpm / npm lock files (optional, if using monorepo management)
+# yarn.lock
+# pnpm-lock.yaml
+# package-lock.json
+
+# Spring Boot DevTools
+**/spring-boot-devtools.properties

@@ -1,0 +1,35 @@
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.DS_Store
+
+# Spring Boot specific
+spring-boot-devtools.properties
+
+# OS files
+Thumbs.db
+.DS_Store
