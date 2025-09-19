@@ -7,7 +7,7 @@ interface Props {
     icon?: React.ReactNode;
 }
 
-function Button(props: Props) {
+const Button = (props: Props) =>{
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
     return (
