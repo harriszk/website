@@ -21,7 +21,7 @@ interface Props {
     editor: Editor | null;
 }
 
-function Toolbar(props: Props) {
+const Toolbar = (props: Props) =>{
     const { editor } = props;
 
     if (!editor) {

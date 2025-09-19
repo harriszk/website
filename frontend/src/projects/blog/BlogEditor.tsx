@@ -7,7 +7,7 @@ import Toolbar from "./Toolbar";
 // Math extension (KaTeX-based)
 // import MathExtension from "tiptap-extension-math";
 
-export default function BlogEditor() {
+const BlogEditor = () => {
     const [title, setTitle] = useState<string>("");
 
     const editor = useEditor({
