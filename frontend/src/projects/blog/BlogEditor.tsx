@@ -64,3 +64,5 @@ const BlogEditor = () => {
         </div>
     );
 }
+
+export default BlogEditor;
