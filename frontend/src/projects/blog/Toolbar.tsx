@@ -21,7 +21,7 @@ interface Props {
     editor: Editor | null;
 }
 
-const Toolbar = (props: Props) =>{
+const Toolbar = (props: Props) => {
     const { editor } = props;
 
     if (!editor) {
@@ -138,6 +138,6 @@ const Toolbar = (props: Props) =>{
             />
         </div>
     );
-}
+};
 
 export default Toolbar;
