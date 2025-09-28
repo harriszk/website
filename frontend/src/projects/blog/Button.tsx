@@ -7,7 +7,7 @@ interface Props {
     icon?: React.ReactNode;
 }
 
-const Button = (props: Props) =>{
+const Button = (props: Props) => {
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
     return (
@@ -23,6 +23,6 @@ const Button = (props: Props) =>{
             {props.icon && showTooltip && <div>{props.fallbackText}</div>}
         </>
     );
-}
+};
 
 export default Button;

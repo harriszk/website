@@ -29,7 +29,7 @@ const BlogEditor = () => {
             title,
             content,
             json,
-            text
+            text,
         });
         alert("Post saved! Check console for output.");
     };
@@ -63,6 +63,6 @@ const BlogEditor = () => {
             </button>
         </div>
     );
-}
+};
 
 export default BlogEditor;

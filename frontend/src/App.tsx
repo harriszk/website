@@ -15,7 +15,10 @@ const App = () => {
                     <Route path="*" element={<Unknown />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/projects/blog/*" element={<Blog />} />
-                    <Route path="/projects/lung-talk/*" element={<div>Lung Talk Project Placeholder</div>} />
+                    <Route
+                        path="/projects/lung-talk/*"
+                        element={<div>Lung Talk Project Placeholder</div>}
+                    />
                     <Route path="/about" element={<div>About section</div>} />
                 </Routes>
             </main>
