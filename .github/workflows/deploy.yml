@@ -1,0 +1,47 @@
+name: Deploy Web App to GitHub Pages
+
+permissions:
+    contents: write
+    pull-requests: write
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths:
+            - 'frontend/**'
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        defaults:
+            run:
+                working-directory: frontend
+
+        steps:
+            # Checkout the repository
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            # Set up Node.js
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20  
+
+            # Install dependencies
+            - name: Install dependencies
+              run: npm install
+
+            # Build the app
+            - name: Build
+              run: npm run build
+
+            # Deploy the app
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: "./frontend/dist"
