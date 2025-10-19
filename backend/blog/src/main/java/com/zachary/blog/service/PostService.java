@@ -27,7 +27,11 @@ public class PostService {
         if (id != null && postRepository.existsById(id)) {
             return null;
         }
-
+        
         return postRepository.save(post);
+    }
+
+    public void deletePost(Long id) {
+        postRepository.deleteById(id);
     }
 }
