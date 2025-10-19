@@ -1,7 +1,4 @@
-import {
-    MagnifyingGlassIcon,
-    PlusIcon,
-} from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import api from "../../api";
 import Loading from "../../components/Loading";

@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import blogEndpoints from "./projects/blog/data/blogEndpoints.ts"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import blogEndpoints from "./projects/blog/data/blogEndpoints.ts";
 
 const api = createApi({
     reducerPath: "api",
@@ -9,6 +9,6 @@ const api = createApi({
     endpoints: (build) => ({
         ...blogEndpoints(build),
     }),
-})
+});
 
 export default api;

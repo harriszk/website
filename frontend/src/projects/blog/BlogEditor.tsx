@@ -43,7 +43,7 @@ const BlogEditor = () => {
             createdAt,
             updatedAt: createdAt,
         });
-        
+
         if (!isError) {
             navigate("/projects/blog");
         }
@@ -60,7 +60,7 @@ const BlogEditor = () => {
             return <p>Post published successfully!</p>;
         }
         return null;
-    }
+    };
 
     return (
         <div className="flex">
