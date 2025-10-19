@@ -16,7 +16,7 @@ const Viewer = () => {
         if (!id) {
             return;
         }
-    }
+    };
 
     const removePost = async () => {
         if (!id) {

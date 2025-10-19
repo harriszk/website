@@ -23,5 +23,4 @@ const blogEndpoints = (build: EndpointBuilder<any, any, any>) => ({
     }),
 });
 
-
 export default blogEndpoints;
