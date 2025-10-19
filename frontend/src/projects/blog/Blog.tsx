@@ -7,6 +7,15 @@ import api from "../../api";
 import Loading from "../../components/Loading";
 import BackButton from "../../components/BackButton";
 
+interface Post {
+    id: string;
+    title: string;
+    createdAt: string;
+    content: {
+        message: string;
+    };
+}
+
 const Blog = () => {
     const { data: posts, isLoading } = api.useGetPostsQuery(undefined, {
         refetchOnMountOrArgChange: true,
@@ -46,7 +55,7 @@ const Blog = () => {
                 </div>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {isLoading && <Loading />}
-                    {posts?.map((post) => (
+                    {posts?.map((post: Post) => (
                         <div
                             key={post.id}
                             className="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition"
