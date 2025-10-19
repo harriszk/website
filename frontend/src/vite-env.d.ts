@@ -7,6 +7,7 @@ interface ViteTypeOptions {
 interface ImportMetaEnv {
     readonly VITE_BASE_URL: string;
     readonly VITE_ROUTER_BASE_URL: string;
+    readonly VITE_APP_MODE: 'development' | 'production';
 }
 
 interface ImportMeta {

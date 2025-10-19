@@ -8,8 +8,16 @@ const store = configureStore({
         [api.reducerPath]: api.reducer,
         blog: blogSlice,
     },
-    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger).concat(api.middleware),
-    devTools: process.env.NODE_ENV !== 'production',
+    middleware: (getDefaultMiddleware) => {
+        const middleware = getDefaultMiddleware().concat(api.middleware);
+        
+        if (import.meta.env.VITE_APP_MODE !== 'production') {
+            return middleware.concat(logger);
+        }
+        
+        return middleware;
+    },
+    devTools: import.meta.env.VITE_APP_MODE !== 'production',
 });
 
 export default store;
